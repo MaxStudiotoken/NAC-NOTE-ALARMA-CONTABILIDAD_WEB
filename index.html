@@ -32,12 +32,32 @@
             background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo para el LOGO GRANDE */
+        .logo-grande {
+            width: 180px; /* Tamaño grande del logo */
+            height: auto;
+            background-color: white; /* Fondo blanco para que resalte */
+            padding: 15px;
+            border-radius: 30px; /* Bordes redondeados */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-grande:hover {
+            transform: scale(1.05); /* Efecto zoom al pasar el ratón */
         }
 
         header h1 {
             font-size: 2.8rem;
             margin-bottom: 15px;
+            letter-spacing: 2px;
         }
 
         header p {
@@ -68,6 +88,23 @@
         .btn-playstore i {
             font-size: 1.5rem;
             margin-right: 10px;
+        }
+
+        /* Sección para el BANNER */
+        .banner-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px 0 20px;
+            text-align: center;
+        }
+
+        .banner-img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            object-fit: cover;
         }
 
         /* Sección de características */
@@ -176,19 +213,33 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Ajustes para móviles */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .logo-grande { width: 140px; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Cabecera principal -->
+    <!-- Cabecera principal con LOGO GRANDE -->
     <header>
+        <!-- Aquí llamamos a tu logo -->
+        <img src="logo_notepro.png" alt="Logo NAC" class="logo-grande">
+        
         <h1>NAC</h1>
         <p>Notas, Alarmas y Contabilidad. Tu gestor personal definitivo, desarrollado por <strong>Max Studio</strong>.</p>
-        <!-- Reemplaza el '#' con el enlace real de tu app en Google Play -->
         <a href="#" class="btn-playstore">
             <i class="fab fa-google-play"></i> Descargar en Google Play
         </a>
     </header>
+
+    <!-- Sección del BANNER (Barnet) -->
+    <section class="banner-section">
+        <!-- Aquí llamamos a tu banner -->
+        <img src="barnet_notas.png" alt="Banner NAC App" class="banner-img">
+    </section>
 
     <!-- Características -->
     <section class="features">
@@ -218,22 +269,18 @@
         <p style="margin-bottom: 30px; color: #666;">Ayúdanos a crecer compartiendo la app en tus redes.</p>
         
         <div class="social-buttons">
-            <!-- Botón de X (Twitter) -->
             <button class="social-btn x-twitter" onclick="compartirX()">
                 <i class="fab fa-x-twitter"></i> Compartir en X
             </button>
 
-            <!-- Botón de Facebook -->
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://maxstudiotoken.github.io/NAC-NOTE-ALARMA-CONTABILIDAD_WEB/" target="_blank" rel="noopener noreferrer" class="social-btn facebook">
                 <i class="fab fa-facebook-f"></i> Compartir en Facebook
             </a>
 
-            <!-- Botón de WhatsApp (Opcional pero muy útil) -->
             <a href="https://api.whatsapp.com/send?text=¡Mira%20esta%20increíble%20app%20para%20organizar%20tus%20notas,%20alarmas%20y%20contabilidad!%20https://maxstudiotoken.github.io/NAC-NOTE-ALARMA-CONTABILIDAD_WEB/" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp">
                 <i class="fab fa-whatsapp"></i> Compartir en WhatsApp
             </a>
 
-            <!-- Botón de Instagram (Copia al portapapeles) -->
             <button class="social-btn instagram" onclick="compartirInstagram()">
                 <i class="fab fa-instagram"></i> Compartir en Instagram
             </button>
@@ -244,26 +291,20 @@
     <footer>
         <p>&copy; 2026 Max Studio. Todos los derechos reservados.</p>
         <p style="margin-top: 10px;">
-            <!-- Este enlace debe apuntar a tu política de privacidad (puede ser otro archivo o la misma página con una sección) -->
             <a href="#">Política de Privacidad</a> | Contacto: maxi1985_19@hotmail.com
         </p>
     </footer>
 
     <script>
-        // Variables de configuración (CAMBIAR CUANDO TENGAS EL ENLACE DE PLAY STORE)
         const urlApp = "https://maxstudiotoken.github.io/NAC-NOTE-ALARMA-CONTABILIDAD_WEB/";
         const textoCompartir = "¡Descubre NAC! La app definitiva de Max Studio para gestionar tus Notas, Alarmas y Contabilidad. ";
 
-        // Función para compartir en X (Twitter)
         function compartirX() {
             const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(textoCompartir)}&url=${encodeURIComponent(urlApp)}`;
             window.open(url, '_blank');
         }
 
-        // Función para compartir en Instagram
         function compartirInstagram() {
-            // Instagram no permite compartir enlaces directos desde la web, 
-            // así que copiamos el enlace al portapapeles y avisamos al usuario.
             navigator.clipboard.writeText(textoCompartir + urlApp).then(() => {
                 alert("¡Enlace copiado al portapapeles! 🎉\n\nAbre Instagram, crea una Historia o Publicación y pégalo.");
             }).catch(err => {
