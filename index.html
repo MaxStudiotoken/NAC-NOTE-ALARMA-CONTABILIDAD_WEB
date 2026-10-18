@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAC: Notas, Alarmas y Contabilidad | Max Studio</title>
+    <!-- Font Awesome para los iconos de redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #202124;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+        }
+
+        .btn-playstore {
+            display: inline-flex;
+            align-items: center;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-playstore:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-playstore i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        /* Sección de características */
+        .features {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Sección de Redes Sociales */
+        .social-section {
+            background: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .social-section h2 {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 25px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: opacity 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .social-btn i {
+            margin-right: 8px;
+        }
+
+        .social-btn:hover {
+            opacity: 0.8;
+        }
+
+        .x-twitter { background-color: #000000; }
+        .facebook { background-color: #1877F2; }
+        .instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .whatsapp { background-color: #25D366; }
+
+        /* Pie de página */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #8ab4f8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera principal -->
+    <header>
+        <h1>NAC</h1>
+        <p>Notas, Alarmas y Contabilidad. Tu gestor personal definitivo, desarrollado por <strong>Max Studio</strong>.</p>
+        <!-- Reemplaza el '#' con el enlace real de tu app en Google Play -->
+        <a href="#" class="btn-playstore">
+            <i class="fab fa-google-play"></i> Descargar en Google Play
+        </a>
+    </header>
+
+    <!-- Características -->
+    <section class="features">
+        <h2>Todo lo que necesitas en una sola App</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-sticky-note"></i>
+                <h3>Notas Rápidas</h3>
+                <p>Captura tus ideas, listas y pensamientos al instante. Sincronizado y siempre seguro.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-clock"></i>
+                <h3>Alarmas y Recordatorios</h3>
+                <p>No vuelvas a olvidar nada. Configura alarmas inteligentes y recordatorios precisos.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Contabilidad Fácil</h3>
+                <p>Lleva el control de tus ingresos y gastos de forma sencilla y visual. ¡Toma el control de tus finanzas!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección para Compartir en Redes Sociales -->
+    <section class="social-section">
+        <h2>¡Comparte NAC con el mundo!</h2>
+        <p style="margin-bottom: 30px; color: #666;">Ayúdanos a crecer compartiendo la app en tus redes.</p>
+        
+        <div class="social-buttons">
+            <!-- Botón de X (Twitter) -->
+            <button class="social-btn x-twitter" onclick="compartirX()">
+                <i class="fab fa-x-twitter"></i> Compartir en X
+            </button>
+
+            <!-- Botón de Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://maxstudiotoken.github.io/NAC-NOTE-ALARMA-CONTABILIDAD_WEB/" target="_blank" rel="noopener noreferrer" class="social-btn facebook">
+                <i class="fab fa-facebook-f"></i> Compartir en Facebook
+            </a>
+
+            <!-- Botón de WhatsApp (Opcional pero muy útil) -->
+            <a href="https://api.whatsapp.com/send?text=¡Mira%20esta%20increíble%20app%20para%20organizar%20tus%20notas,%20alarmas%20y%20contabilidad!%20https://maxstudiotoken.github.io/NAC-NOTE-ALARMA-CONTABILIDAD_WEB/" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> Compartir en WhatsApp
+            </a>
+
+            <!-- Botón de Instagram (Copia al portapapeles) -->
+            <button class="social-btn instagram" onclick="compartirInstagram()">
+                <i class="fab fa-instagram"></i> Compartir en Instagram
+            </button>
+        </div>
+    </section>
+
+    <!-- Pie de página con Privacidad -->
+    <footer>
+        <p>&copy; 2026 Max Studio. Todos los derechos reservados.</p>
+        <p style="margin-top: 10px;">
+            <!-- Este enlace debe apuntar a tu política de privacidad (puede ser otro archivo o la misma página con una sección) -->
+            <a href="#">Política de Privacidad</a> | Contacto: maxi1985_19@hotmail.com
+        </p>
+    </footer>
+
+    <script>
+        // Variables de configuración (CAMBIAR CUANDO TENGAS EL ENLACE DE PLAY STORE)
+        const urlApp = "https://maxstudiotoken.github.io/NAC-NOTE-ALARMA-CONTABILIDAD_WEB/";
+        const textoCompartir = "¡Descubre NAC! La app definitiva de Max Studio para gestionar tus Notas, Alarmas y Contabilidad. ";
+
+        // Función para compartir en X (Twitter)
+        function compartirX() {
+            const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(textoCompartir)}&url=${encodeURIComponent(urlApp)}`;
+            window.open(url, '_blank');
+        }
+
+        // Función para compartir en Instagram
+        function compartirInstagram() {
+            // Instagram no permite compartir enlaces directos desde la web, 
+            // así que copiamos el enlace al portapapeles y avisamos al usuario.
+            navigator.clipboard.writeText(textoCompartir + urlApp).then(() => {
+                alert("¡Enlace copiado al portapapeles! 🎉\n\nAbre Instagram, crea una Historia o Publicación y pégalo.");
+            }).catch(err => {
+                alert("No se pudo copiar el enlace. Por favor, copia manualmente: " + urlApp);
+            });
+        }
+    </script>
+</body>
+</html>
